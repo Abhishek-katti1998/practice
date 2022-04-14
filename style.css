@@ -1,0 +1,275 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.buttons{
+    justify-content: space-between;
+    margin: auto;
+}
+button{
+    width:100px;
+    background-color: green;
+    color:white;
+}
+button:hover{
+    cursor: pointer;
+}
+.container-one,
+.container-two,
+.container-three,
+.container-four{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.container-one{
+    width: 40%;
+    margin:auto;
+    display: flex;
+   margin-top: 100px;
+}
+.container-two {
+    width: 80px;
+    height: 500px;
+    margin-top: auto;
+    margin-left: 970px;
+    z-index: 1;
+    bottom: 80px;
+    flex-direction: column;
+
+    
+}
+.container-three{
+    bottom: 160px;
+    width: 40%;
+    margin-left:450px;
+   flex-direction: row-reverse;
+}
+.container-four{
+    width: 80px;
+    height: 500px;
+   bottom: 260px;
+   flex-direction: column-reverse;
+    bottom: 658px;
+    left: 453px;
+}
+/*Default styles*/
+.upper-circle-default,
+.right-circle-default,
+.bottom-circle-default,
+.left-circle-default
+{
+
+height: 80px;
+width: 80px;
+border-radius: 50%;
+
+}
+.upper-circle-default{
+background-color:red ;
+}
+.right-circle-default{
+background-color:yellow;
+}
+.bottom-circle-default{
+background-color:hsl(206,85%,57.5%);
+}
+.left-circle-default{
+background-color:green;
+}
+
+.upper-circle,
+.right-circle,
+.bottom-circle,
+.left-circle{
+border-radius: 50%;
+height: 80px;
+width: 80px;
+position: relative;
+animation-duration: 2s;
+animation-delay: 0;
+animation-timing-function: linear;
+animation-direction:alternate-reverse;
+animation-iteration-count: infinite;
+transition: all 0.5s ease-in;
+}
+.upper-circle{
+
+    z-index:10;
+    background-color: red;
+    border-radius: 50%;
+    animation-name: ellipse1;
+   
+}
+
+.right-circle {
+       background-color: yellow;
+        animation-name: ellipse2;
+        animation-duration: 2s;
+        animation-delay: 0;
+        animation-timing-function: linear;
+        animation-direction:alternate-reverse;
+        animation-iteration-count: infinite;
+        transition: all 0.5s ease-in;
+}
+.bottom-circle{
+    z-index: 10;
+ background-color: blue;
+animation-name:eclipse3;
+}
+.left-circle{
+background-color: green;
+animation-name:eclipse4;
+animation-direction:alternate-reverse;
+
+}
+@keyframes ellipse1 {
+
+    0% {
+        border-radius: 50%;
+        height: 80px;
+        width: 10%;
+        background-color: red;
+    }
+
+    25% {
+        border-radius: 100px;
+        width: 30%;
+       
+    }
+
+    50% {
+        border-radius: 100px;
+        width: 50%;
+        background-color: yellow;
+        /* background-color: hsl(206,85%,57.5%); */
+    }
+
+    75% {
+        border-radius: 100px;
+       
+        width: 70%;
+        background-color: yellow;
+
+  
+
+    }
+
+    100% {
+        border-radius: 100px;
+        background-color: yellow;
+        width: 100%;
+ 
+    }
+   
+}
+
+@keyframes ellipse2 {
+
+    0% {
+        border-radius: 50%;
+        height: 80px;
+     
+        background-color: yellow;
+  
+    }
+
+    25% {
+        border-radius: 100px;
+        height: 30%;
+        background-color: hsl(206,85%,57.5%);
+    }
+
+    50% {
+        border-radius: 100px;
+        height: 50%;
+        background-color: hsl(206,85%,57.5%);
+    }
+
+    75% {
+        background-color: hsl(206,85%,57.5%);
+        border-radius: 100px;
+        height: 70%;
+
+
+    }
+
+    100% {
+        background-color: hsl(206,85%,57.5%);
+        border-radius: 100px;
+     
+        height: 100%;
+
+    }
+}
+
+@keyframes eclipse3 {
+    0% {
+        border-radius: 50%;
+        height: 80px;
+        width: 10%;
+        background-color: hsl(206,85%,57.5%);
+    }
+    
+    25% {
+        border-radius: 100px;
+        width: 30%;
+        background-color: green;
+    }
+    
+    50% {
+        border-radius: 100px;
+        width: 50%;
+        background-color: green;
+    }
+    
+    75% {
+                background-color: green;
+        border-radius: 100px;
+        width: 70%;
+    
+    }
+    
+    100% {
+                background-color: green;
+        border-radius: 100px;
+        width: 100%;
+    
+    }
+    
+}
+@keyframes eclipse4 {
+0% {
+    border-radius: 50%;
+    height: 80px;
+
+    background-color: green;
+
+}
+
+25% {
+    border-radius: 100px;
+    height: 30%;
+    background-color: red;
+}
+
+50% {
+    border-radius: 100px;
+    height: 50%;
+    background-color: red;
+}
+
+75% {
+    background-color: red;
+    border-radius: 100px;
+    height: 70%;
+}
+
+100% {
+    background-color: red;
+    border-radius: 100px;
+    height: 100%;
+
+}
+}
